@@ -1,0 +1,25 @@
+{
+  "name": "double-helix-backend",
+  "version": "1.0.0",
+  "description": "Rest API for double helix mobile app",
+  "main": "./src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node ./src/index.ts",
+    "local": "ts-node ./src/local.ts"
+  },
+  "author": "Tomy Salminen",
+  "license": "ISC",
+  "dependencies": {
+    "@types/body-parser": "^1.19.0",
+    "aws-serverless-express": "^3.3.8",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.9.2"
+  },
+  "devDependencies": {
+    "@types/aws-serverless-express": "^3.3.3",
+    "@types/express": "^4.17.6"
+  }
+}
