@@ -16,7 +16,7 @@ export default class ApiStack extends cdk.Stack {
         description: 'Gateway for double helix mobile app',
       });
 
-      api.root.addResource('api').addProxy({
+      api.root.addProxy({
         defaultIntegration: new apigateway.LambdaIntegration(handler),
         anyMethod: true,
       });
