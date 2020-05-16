@@ -4,7 +4,7 @@
   "description": "Rest API for double helix mobile app",
   "scripts": {
     "deploy": "npm run build:api && cdk deploy",
-    "build:api": "cd api-function && npm run build"
+    "build:api": "cd api-function && npm run build:release"
   },
   "author": "Tomy Salminen",
   "license": "ISC",
