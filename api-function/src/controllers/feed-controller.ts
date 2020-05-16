@@ -1,5 +1,8 @@
-import * as express from 'express';
+import { routeUtils } from '../util';
 
-export const getFeed = (req: express.Request, res: express.Response) => {
-  return res.json({ message: "Hello world!" });
-};
+
+export const getFeed = routeUtils.createRoute(async (req, res) => {
+  return {
+    endpoint: 'getFeed',
+  };
+});

@@ -1,14 +1,17 @@
 import express from 'express';
 import feedRoute from './feed';
+import { routeUtils } from '../util';
 
 export const createRoutes = () => {
   const router = express.Router();
 
   router.use('/feed', feedRoute);
 
-  router.use('*', (req, res) => {
-    return res.sendStatus(404);
-  });
+  router.use('*', routeUtils.createRoute(async (req, res) => {
+    return {
+      endpoint: 'catchAll',
+    }
+  }));
   
   return router;
 };
