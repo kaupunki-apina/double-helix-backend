@@ -1,0 +1,34 @@
+{
+  "name": "double-helix-backend",
+  "version": "1.0.0",
+  "description": "Rest API for double helix mobile app",
+  "bin": {
+    "api": "bin/api.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node ./src/handler.ts",
+    "local": "ts-node ./src/local.ts",
+    "build": "rm -rf dist && tsc",
+    "postbuild": "cp package.json dist/package.json && cd dist && npm install --only=production"
+  },
+  "author": "Tomy Salminen",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-cdk/aws-lambda": "^1.39.0",
+    "@aws-cdk/core": "^1.39.0",
+    "aws-serverless-express": "^3.3.8",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "install": "^0.13.0",
+    "npm": "^6.14.5"
+  },
+  "devDependencies": {
+    "@aws-cdk/assert": "^1.39.0",
+    "@types/aws-serverless-express": "^3.3.3",
+    "@types/body-parser": "^1.19.0",
+    "@types/express": "^4.17.6",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.9.2"
+  }
+}

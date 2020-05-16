@@ -7,7 +7,7 @@ console.log(`listening on http://localhost:${port}`)
 
 const closeServer = (signal: any) => {
   console.log(signal + ' received');
-  console.log('Closing http.Server ..');
+  console.log('Closing http.Server...');
   server.close();
   process.exit();
 }
